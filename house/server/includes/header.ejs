@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="canonical" href="http://www.techbow.com/">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta property="og:site_name" content="Techbow">
+		<meta property="og:title" content="Techbow">
+		<meta property="og:url" content="http://www.techbow.com/">
+		<meta property="og:type" content="website">
+		<meta itemprop="name" content="Techbow">
+		<meta itemprop="url" content="http://www.techbow.com/">
+		<meta name="twitter:title" content="Techbow">
+		<meta name="twitter:url" content="http://www.techbow.com/">
+		<meta name="twitter:card" content="summary">
+		<meta name="description" content="Techbow">
+		<title>Techbow</title>
+
+
+		<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="/stylesheets/style.css">
+		<link rel="stylesheet" href="/stylesheets/animations.css">
+		<link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.css">
+
+
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar navbar-modified">
+		      <div class="container-fluid">
+
+				   <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+ 						<a class="navbar-brand" href="/">
+							<img alt="Brand" src="/images/logo@2x.png">
+      					</a>
+				    </div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+
+							<li><a href="/">首页</a></li>
+<!-- 							<li class="dropdown">
+								<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">首页 <span class="caret"></span></a>
+							          <ul class="dropdown-menu dropdown-menu-modified">
+							            <li><a href="#">TPMP</a></li>
+							            <li><a href="#">Bootcamp</a></li>
+							            <li><a href="#">Online</a></li>
+							          </ul>
+					        </li> -->
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">线下课程 <span class="caret"></span></a>
+							          <ul class="dropdown-menu dropdown-menu-modified">
+
+							            <li><a href="/course">课程目录</a></li>
+							            <li><a href="/teacher">教师介绍</a></li>
+							            <li><a href="/student">学生Offer</a></li>
+							            <li><a href="#">预约老师</a></li>
+							          </ul>
+					        </li>
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TPMP专区 <span class="caret"></span></a>
+							          <ul class="dropdown-menu dropdown-menu-modified">
+
+							            <li><a href="/course">TPMP介绍</a></li>
+							            <li><a href="#">学生签到</a></li>
+							          </ul>
+					        </li>
+							<li><a href="/workshop">线下活动</a></li>
+							<li><a href="/contact">联系我们</a></li>
+							<li data-toggle="modal" data-target="#myModal"><a><button class="btn btn-default btn-primary">登陆</button></a></li>
+							<li data-toggle="modal" data-target="#myModalSignup"><a><button class="btn btn-default btn-primary">注册</button></a></li>
+						</ul>
+
+					</div>
+
+				</div>
+	    	</nav>
+    	</header>
+
+		<!-- Modal Login-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <form action="/login" method="post" class="form-horizontal form-center">
+		       		<h4 class="modal-title text-center" id="myModalLabel">登陆</h4>
+				  	<div class="form-group form-input">
+				  		<label for="inputEmail3" class="control-label">邮箱</label>
+					   <!--  <label for="exampleInputEmail1">邮箱</label> -->
+					    <div>
+					    	<input type="text" class="form-control" id="username" name="username" placeholder="Username">
+					    </div>
+
+				  	</div>
+					  <div class="form-group form-input">
+					  	<label for="inputEmail3" class="control-label">密码</label>
+<!-- 					    <label for="exampleInputPassword1">密码</label> -->
+					    <div>
+					    	<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+					    </div>
+
+					  </div>
+					  <div class="button-group">
+					 	<button type="submit" class="btn btn-primary">Submit</button>
+					  	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					  </div>
+				</form>
+		      </div>
+
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal SignUp-->
+		<div class="modal fade" id="myModalSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <form action="/api/users" method="post" class="form-horizontal form-center">
+		       		<h4 class="modal-title text-center" id="myModalLabel">注册</h4>
+				  	<div class="form-group form-input">
+				  		<label for="exampleInputEmail1" class="control-label">邮箱</label>
+					   <!--  <label for="exampleInputEmail1">邮箱</label> -->
+					  	<div>
+					    	<input type="email" class="form-control" id="signupUserName" name="username" placeholder="Username">
+					    </div>
+				  	</div>
+				  	<div class="form-group form-input">
+				  		<label for="exampleInputEmail1" class="control-label">Last Name</label>
+					   <!--  <label for="exampleInputEmail1">邮箱</label> -->
+					  	<div>
+					    	<input type="text" class="form-control" id="signupUserName" name="lastName" placeholder="Lastname">
+					    </div>
+				  	</div>
+				  	<div class="form-group form-input">
+				  		<label for="exampleInputEmail1" class="control-label">First Name</label>
+					   <!--  <label for="exampleInputEmail1">邮箱</label> -->
+					  	<div>
+					    	<input type="text" class="form-control" id="signupUserName" name="firstName" placeholder="Firstname">
+					    </div>
+				  	</div>
+
+					  <div class="form-group form-input">
+					  	<label for="inputEmail3" class="control-label">密码</label>
+					    <!-- <label for="exampleInputPassword1">密码</label> -->
+					    <div>
+					    	<input type="password" class="form-control" id="signupPassword1" name="password" placeholder="Password">
+					    </div>
+					  </div>
+<!-- 					  <div class="form-group">
+					    <label for="exampleInputPassword1">重复密码</label>
+					    <input type="password" class="form-control" id="signupPassword2" placeholder="Password">
+					  </div>  -->
+					  <div class="button-group">
+					 	<button type="submit" class="btn btn-primary">Submit</button>
+					  	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					  </div>
+				</form>
+		      </div>
+
+		    </div>
+		  </div>
+		</div>
+
+
+    	<div class="main">
